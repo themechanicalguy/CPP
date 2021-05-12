@@ -1,3 +1,5 @@
+// Find sum of negative and positive integers in an array.
+
 #include <iostream>
 using namespace std;
 int countPositiveNumbers(int A[], int n)
