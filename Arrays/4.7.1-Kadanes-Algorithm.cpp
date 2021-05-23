@@ -10,19 +10,20 @@ int main()
     {
         cin >> A[i];
     }
+    int currentSum = 0;
     int maxSum = INT_MIN;
     for (int i = 0; i < n; i++)
     {
-        for (int j = i; j < n; j++)
+        currentSum += A[i];
+
+        if (currentSum < 0)
         {
-            int sum = 0;
-            for (int k = i; k <= j; k++)
-            {
-                sum = sum + A[k];
-            }
-            int maxSum = max(maxSum, sum);
+            currentSum = 0;
         }
+
+        maxSum = max(maxSum, currentSum);
     }
-    cout << maxSum;
+
+    cout << maxSum << endl;
     return 0;
 }
