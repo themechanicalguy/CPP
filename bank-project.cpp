@@ -35,7 +35,7 @@ public:
     friend ifstream &operator>>(ifstream &ifs, Account &acc);
     friend ostream &operator<<(ostream &os, Account &acc);
 };
-
+long Account::NextAccountNumber = 0;
 class Bank
 {
 private:
